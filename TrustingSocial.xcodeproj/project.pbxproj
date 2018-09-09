@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		455ECA95A2ADAC5C96CEE002 /* Pods_TrustingSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B97FF8F795B60BDA7FB5EB /* Pods_TrustingSocial.framework */; };
+		A676329C21450261009F4F1A /* MainOffersViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676329B21450261009F4F1A /* MainOffersViewModelDataSource.swift */; };
+		A676329E214509BC009F4F1A /* ProvincesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676329D214509BC009F4F1A /* ProvincesCoordinator.swift */; };
+		A67632A021450ABE009F4F1A /* ProvinceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676329F21450ABE009F4F1A /* ProvinceService.swift */; };
+		A67632A321450CCA009F4F1A /* LoansFormViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67632A221450CCA009F4F1A /* LoansFormViewProtocol.swift */; };
+		A67632A62145104B009F4F1A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67632A52145104B009F4F1A /* Observable.swift */; };
+		A67632A821451076009F4F1A /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67632A721451076009F4F1A /* Bindable.swift */; };
+		A67632AA21451095009F4F1A /* UIControlBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67632A921451095009F4F1A /* UIControlBinding.swift */; };
+		A67632AF2145185E009F4F1A /* BlockBasedSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67632AC2145185E009F4F1A /* BlockBasedSelector.swift */; };
+		A67632B02145185E009F4F1A /* BlockBasedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = A67632AD2145185E009F4F1A /* BlockBasedSelector.m */; };
+		A67632B621457382009F4F1A /* ListProvinceViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67632B521457382009F4F1A /* ListProvinceViewModelDataSource.swift */; };
 		CEDC94622142E091009ECF47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC94612142E091009ECF47 /* AppDelegate.swift */; };
 		CEDC94792142E092009ECF47 /* TrustingSocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC94782142E092009ECF47 /* TrustingSocialTests.swift */; };
 		CEDC94842142E093009ECF47 /* TrustingSocialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC94832142E093009ECF47 /* TrustingSocialUITests.swift */; };
@@ -71,6 +81,18 @@
 
 /* Begin PBXFileReference section */
 		54B97FF8F795B60BDA7FB5EB /* Pods_TrustingSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrustingSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A676329B21450261009F4F1A /* MainOffersViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOffersViewModelDataSource.swift; sourceTree = "<group>"; };
+		A676329D214509BC009F4F1A /* ProvincesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvincesCoordinator.swift; sourceTree = "<group>"; };
+		A676329F21450ABE009F4F1A /* ProvinceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceService.swift; sourceTree = "<group>"; };
+		A67632A221450CCA009F4F1A /* LoansFormViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansFormViewProtocol.swift; sourceTree = "<group>"; };
+		A67632A52145104B009F4F1A /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		A67632A721451076009F4F1A /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		A67632A921451095009F4F1A /* UIControlBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlBinding.swift; sourceTree = "<group>"; };
+		A67632AC2145185E009F4F1A /* BlockBasedSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockBasedSelector.swift; sourceTree = "<group>"; };
+		A67632AD2145185E009F4F1A /* BlockBasedSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockBasedSelector.m; sourceTree = "<group>"; };
+		A67632AE2145185E009F4F1A /* BlockBasedSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockBasedSelector.h; sourceTree = "<group>"; };
+		A67632B421451920009F4F1A /* TrustingSocialBridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrustingSocialBridging-Header.h"; sourceTree = "<group>"; };
+		A67632B521457382009F4F1A /* ListProvinceViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProvinceViewModelDataSource.swift; sourceTree = "<group>"; };
 		C20E7CAD1AA02C64869DCCFE /* Pods-TrustingSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrustingSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrustingSocial/Pods-TrustingSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		CEDC945E2142E091009ECF47 /* TrustingSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrustingSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDC94612142E091009ECF47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,22 +106,6 @@
 		CEDC94932142E123009ECF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEDC94952142E123009ECF47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEDC94982142E123009ECF47 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		CEDC949C2142E123009ECF47 /* RequestPermissionCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPermissionCoordinator.swift; sourceTree = "<group>"; };
-		CEDC949E2142E123009ECF47 /* RequestPermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPermissionViewController.swift; sourceTree = "<group>"; };
-		CEDC94A12142E123009ECF47 /* HomePageCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageCoordinator.swift; sourceTree = "<group>"; };
-		CEDC94A32142E123009ECF47 /* ListCarsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCarsViewModel.swift; sourceTree = "<group>"; };
-		CEDC94A42142E123009ECF47 /* MapCarsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCarsViewModel.swift; sourceTree = "<group>"; };
-		CEDC94A62142E123009ECF47 /* HomeListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListViewModel.swift; sourceTree = "<group>"; };
-		CEDC94A72142E123009ECF47 /* HomeMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMapViewModel.swift; sourceTree = "<group>"; };
-		CEDC94A92142E123009ECF47 /* PlaceMarkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMarkModel.swift; sourceTree = "<group>"; };
-		CEDC94AA2142E123009ECF47 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
-		CEDC94AC2142E123009ECF47 /* ListCarsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCarsViewController.swift; sourceTree = "<group>"; };
-		CEDC94AD2142E123009ECF47 /* CarsMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarsMapsViewController.swift; sourceTree = "<group>"; };
-		CEDC94AF2142E123009ECF47 /* DriverInformationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverInformationCell.xib; sourceTree = "<group>"; };
-		CEDC94B02142E123009ECF47 /* DriverPinMarkView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverPinMarkView.xib; sourceTree = "<group>"; };
-		CEDC94B12142E123009ECF47 /* DriverInformationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverInformationCell.swift; sourceTree = "<group>"; };
-		CEDC94B22142E123009ECF47 /* DriverPinMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverPinMarkView.swift; sourceTree = "<group>"; };
-		CEDC94B42142E123009ECF47 /* SearchDriversServiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDriversServiece.swift; sourceTree = "<group>"; };
 		CEDC94B62142E123009ECF47 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		CEDC94B72142E123009ECF47 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CEDC94B82142E123009ECF47 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -165,6 +171,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A67632A121450CB1009F4F1A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A67632A221450CCA009F4F1A /* LoansFormViewProtocol.swift */,
+				A67632B521457382009F4F1A /* ListProvinceViewModelDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A67632A42145103A009F4F1A /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				A67632AB2145185E009F4F1A /* BlockBasedSelector */,
+				A67632A52145104B009F4F1A /* Observable.swift */,
+				A67632A721451076009F4F1A /* Bindable.swift */,
+				A67632A921451095009F4F1A /* UIControlBinding.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		A67632AB2145185E009F4F1A /* BlockBasedSelector */ = {
+			isa = PBXGroup;
+			children = (
+				A67632AC2145185E009F4F1A /* BlockBasedSelector.swift */,
+				A67632AE2145185E009F4F1A /* BlockBasedSelector.h */,
+				A67632AD2145185E009F4F1A /* BlockBasedSelector.m */,
+				A67632B421451920009F4F1A /* TrustingSocialBridging-Header.h */,
+			);
+			path = BlockBasedSelector;
+			sourceTree = "<group>";
+		};
 		C119D1D26D216D51372E4AC9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,112 +290,8 @@
 			children = (
 				CEDC94FE21439FBC009ECF47 /* Loans */,
 				CEDC94F121439ECB009ECF47 /* MainOffers */,
-				CEDC949A2142E123009ECF47 /* RequestPermission */,
-				CEDC949F2142E123009ECF47 /* HomeDrivers */,
 			);
 			path = Sections;
-			sourceTree = "<group>";
-		};
-		CEDC949A2142E123009ECF47 /* RequestPermission */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC949B2142E123009ECF47 /* Coordinator */,
-				CEDC949D2142E123009ECF47 /* ViewController */,
-			);
-			path = RequestPermission;
-			sourceTree = "<group>";
-		};
-		CEDC949B2142E123009ECF47 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC949C2142E123009ECF47 /* RequestPermissionCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		CEDC949D2142E123009ECF47 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC949E2142E123009ECF47 /* RequestPermissionViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		CEDC949F2142E123009ECF47 /* HomeDrivers */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC94A02142E123009ECF47 /* Coordinators */,
-				CEDC94A22142E123009ECF47 /* ViewModels */,
-				CEDC94A82142E123009ECF47 /* Models */,
-				CEDC94AB2142E123009ECF47 /* Controllers */,
-				CEDC94AE2142E123009ECF47 /* Views */,
-				CEDC94B32142E123009ECF47 /* Services */,
-			);
-			path = HomeDrivers;
-			sourceTree = "<group>";
-		};
-		CEDC94A02142E123009ECF47 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC94A12142E123009ECF47 /* HomePageCoordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		CEDC94A22142E123009ECF47 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC94A32142E123009ECF47 /* ListCarsViewModel.swift */,
-				CEDC94A42142E123009ECF47 /* MapCarsViewModel.swift */,
-				CEDC94A52142E123009ECF47 /* Protocols */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		CEDC94A52142E123009ECF47 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC94A62142E123009ECF47 /* HomeListViewModel.swift */,
-				CEDC94A72142E123009ECF47 /* HomeMapViewModel.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		CEDC94A82142E123009ECF47 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC94A92142E123009ECF47 /* PlaceMarkModel.swift */,
-				CEDC94AA2142E123009ECF47 /* Car.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CEDC94AB2142E123009ECF47 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC94AC2142E123009ECF47 /* ListCarsViewController.swift */,
-				CEDC94AD2142E123009ECF47 /* CarsMapsViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		CEDC94AE2142E123009ECF47 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC94AF2142E123009ECF47 /* DriverInformationCell.xib */,
-				CEDC94B02142E123009ECF47 /* DriverPinMarkView.xib */,
-				CEDC94B12142E123009ECF47 /* DriverInformationCell.swift */,
-				CEDC94B22142E123009ECF47 /* DriverPinMarkView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		CEDC94B32142E123009ECF47 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				CEDC94B42142E123009ECF47 /* SearchDriversServiece.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		CEDC94B52142E123009ECF47 /* Extensions */ = {
@@ -388,6 +321,7 @@
 		CEDC94BC2142E123009ECF47 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A67632A42145103A009F4F1A /* Binding */,
 				CEDC94EE21437CD2009ECF47 /* LoadingView */,
 				CEDC94DC2142E179009ECF47 /* Validation */,
 			);
@@ -465,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDC94F721439F71009ECF47 /* MainOffersViewModel.swift */,
+				A676329B21450261009F4F1A /* MainOffersViewModelDataSource.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -502,6 +437,7 @@
 		CEDC95002143A021009ECF47 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A67632A121450CB1009F4F1A /* Protocols */,
 				CEDC95092143A0B7009ECF47 /* ListProvinceViewModel.swift */,
 				CEDC950B2143A0C4009ECF47 /* LoansFormViewModel.swift */,
 			);
@@ -521,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDC95032143A05C009ECF47 /* LoansFormCoordinator.swift */,
+				A676329D214509BC009F4F1A /* ProvincesCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -529,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDC95132143A10D009ECF47 /* LoansService.swift */,
+				A676329F21450ABE009F4F1A /* ProvinceService.swift */,
 			);
 			path = Serviece;
 			sourceTree = "<group>";
@@ -749,15 +687,20 @@
 			files = (
 				CEDC951D2143AE2C009ECF47 /* OfferCellTableViewCell.swift in Sources */,
 				CEDC950C2143A0C4009ECF47 /* LoansFormViewModel.swift in Sources */,
+				A67632A821451076009F4F1A /* Bindable.swift in Sources */,
 				CEDC95272143B6B6009ECF47 /* ValidateTextFieldStackView.swift in Sources */,
 				CEDC94F321439EF7009ECF47 /* MainOffersViewController.swift in Sources */,
 				CEDC94EB21437AFE009ECF47 /* ValidateBindingExtesions.swift in Sources */,
 				CEDC952F2144D5CB009ECF47 /* UITextField+Extension.swift in Sources */,
+				A676329E214509BC009F4F1A /* ProvincesCoordinator.swift in Sources */,
 				CEDC94D72142E123009ECF47 /* UIView+Extension.swift in Sources */,
 				CEDC94D62142E123009ECF47 /* UIColor+Extension.swift in Sources */,
 				CEDC950A2143A0B7009ECF47 /* ListProvinceViewModel.swift in Sources */,
 				CEDC95062143A079009ECF47 /* LoansFormViewController.swift in Sources */,
+				A67632AA21451095009F4F1A /* UIControlBinding.swift in Sources */,
 				CEDC95042143A05C009ECF47 /* LoansFormCoordinator.swift in Sources */,
+				A67632AF2145185E009F4F1A /* BlockBasedSelector.swift in Sources */,
+				A676329C21450261009F4F1A /* MainOffersViewModelDataSource.swift in Sources */,
 				CEDC94ED21437C9D009ECF47 /* Constants.swift in Sources */,
 				CEDC94C42142E123009ECF47 /* BaseCoordinator.swift in Sources */,
 				CEDC94F821439F71009ECF47 /* MainOffersViewModel.swift in Sources */,
@@ -767,18 +710,23 @@
 				CEDC95292143C3F3009ECF47 /* String+Extension.swift in Sources */,
 				CEDC94FD21439F93009ECF47 /* MainOfferCoordinator.swift in Sources */,
 				CEDC95192143A912009ECF47 /* Bank.swift in Sources */,
+				A67632B621457382009F4F1A /* ListProvinceViewModelDataSource.swift in Sources */,
 				CEDC94D82142E123009ECF47 /* UITableView+Extension.swift in Sources */,
 				CEDC95172143A183009ECF47 /* MainOfferService.swift in Sources */,
+				A67632A321450CCA009F4F1A /* LoansFormViewProtocol.swift in Sources */,
 				CEDC94622142E091009ECF47 /* AppDelegate.swift in Sources */,
 				CEDC94E521437994009ECF47 /* TrustingSocialCoordinator.swift in Sources */,
 				CEDC950E2143A0DF009ECF47 /* Loan.swift in Sources */,
 				CEDC95102143A0EA009ECF47 /* Province.swift in Sources */,
 				CEDC952B2144314B009ECF47 /* Int+Extension.swift in Sources */,
+				A67632A62145104B009F4F1A /* Observable.swift in Sources */,
 				CEDC94F021437CE1009ECF47 /* LoadingView.swift in Sources */,
 				CEDC94E921437A1C009ECF47 /* ValidateProtocol.swift in Sources */,
+				A67632A021450ABE009F4F1A /* ProvinceService.swift in Sources */,
 				CEDC94DB2142E123009ECF47 /* Helper.swift in Sources */,
 				CEDC94D52142E123009ECF47 /* UIApplication+Extension.swift in Sources */,
 				CEDC95082143A099009ECF47 /* ListProvinceViewController.swift in Sources */,
+				A67632B02145185E009F4F1A /* BlockBasedSelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,6 +910,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = canhtran.ios.TrustingSocial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrustingSocial/Components/Binding/BlockBasedSelector/TrustingSocialBridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -982,6 +931,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = canhtran.ios.TrustingSocial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrustingSocial/Components/Binding/BlockBasedSelector/TrustingSocialBridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -13,8 +13,8 @@ extension ValidationResult: CustomStringConvertible {
         switch self {
         case .ok:
             return ""
-        case .empty(_):
-            return ""
+        case let .empty(message):
+            return message
         case let .failed(message):
             return message
         }

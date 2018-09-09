@@ -11,22 +11,30 @@ import CT_RESTAPI
 
 typealias MainOfferResponse = (offers: [Offer]?, error: RESTError?)
 
-final class MainOffersViewModel {
+final class MainOffersViewModel: MainOffersViewModelDataSource {
+    
+    weak var delegate: MainOffersViewDelegate?
+    
+    var numberOfItems: Int {
+        return offersDataResutl.offers?.count ?? 0
+    }
+    
+    func itemAtIndex(_ index: Int) -> Offer? {
+        return offersDataResutl.offers?[index]
+    }
     
     private(set) var offersDataResutl: MainOfferResponse = (offers: nil, error: nil)
-    private let service: GetOffersService
+    private let service: GetOffersServiceProtocol
     
-    var dataHasChanged: ((_ offersDataResutl: MainOfferResponse) -> ())?
     var offerSelection: ((_ offer: Offer) -> ())?
     
     /// Default initialize of MainOffersViewModel
     ///
     /// - Parameter service: GetOffersService
-    init(service: GetOffersService) {
+    init(service: GetOffersServiceProtocol) {
         self.service = service
         getListOfferAvailable()
     }
-    
     
     /// Get the list offer by calling API
     private func getListOfferAvailable() {
@@ -37,7 +45,7 @@ final class MainOffersViewModel {
             } else {
                 strongSelf.offersDataResutl = (nil, nil)
             }
-            strongSelf.dataHasChanged?(strongSelf.offersDataResutl)
+            strongSelf.delegate?.dataHasChanged(offersDataResutl: strongSelf.offersDataResutl)
         }
     }
 }

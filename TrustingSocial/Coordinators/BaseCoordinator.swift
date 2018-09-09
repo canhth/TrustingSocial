@@ -8,7 +8,9 @@
 
 import Foundation
 
+/// The base coordinator
 protocol Coordinator
 {
     func startToLoadView()
 }
+

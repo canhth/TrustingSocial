@@ -1,35 +1,35 @@
 //
-//  MainOfferServiece.swift
+//  ProvinceService.swift
 //  TrustingSocial
 //
-//  Created by Canh Tran on 9/8/18.
+//  Created by Canh Tran Wizeline on 9/9/18.
 //  Copyright © 2018 Canh Tran. All rights reserved.
 //
 
 import UIKit
 import CT_RESTAPI
 
-typealias GetOffersServiceCompletionHandler = (_ results: Offer?, _ error: RESTError?) -> Void
+typealias GetProvincesServiceCompletionHandler = (_ result: Province, _ error: RESTError?) -> Void
 
-protocol GetOffersServiceProtocol {
-    func getListOffer(completion: @escaping GetOffersServiceCompletionHandler)
+protocol GetProvincesServiceProtocol {
+    func getListProvinces(completion: @escaping GetProvincesServiceCompletionHandler)
 }
 
-final class GetOffersService: GetOffersServiceProtocol {
+final class GetProvincesService: GetProvincesServiceProtocol {
     
-    /// Get the list offers
+    /// Get the list profinces
     ///
     /// - Parameters:
     ///   - completion: Results and error of API
-    /// - Returns: <Offer>
-    func getListOffer(completion: @escaping GetOffersServiceCompletionHandler) {
+    /// - Returns: <Province>
+    func getListProvinces(completion: @escaping GetProvincesServiceCompletionHandler) {
         
         let apiManager = RESTApiClient(subPath: "", functionName: "", method: .GET, endcoding: .URL)
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         apiManager.baseRequest { (results, error) in
-            if let jsonData = Helper.getDataFromJSONFile(fileName: "offer", key: "") {
+            if let jsonData = Helper.getDataFromJSONFile(fileName: "provinces", key: "") {
                 do {
-                    let results: Offer = try JSONDecoder().decode(Offer.self, from: jsonData)
+                    let results: Province = try JSONDecoder().decode(Province.self, from: jsonData)
                     completion(results, nil)
                 } catch {
                     print("Error when parsing JSON: \(error)")

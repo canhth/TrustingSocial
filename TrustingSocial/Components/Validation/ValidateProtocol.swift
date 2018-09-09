@@ -19,8 +19,10 @@ enum SignupState {
 }
 
 protocol ValidationService {
-    func validateEmail(_ email: String) -> ValidationResult
-    func validatePassword(_ password: String) -> ValidationResult
+    func validateEmptyString(_ string: String) -> ValidationResult
+    func validatePhoneNumber(_ phoneNumber: String) -> ValidationResult
+    func validateVietnamId(_ id: String) -> ValidationResult
+    func validateUserIncome(_ income: String) -> ValidationResult
 }
 
 extension ValidationResult {

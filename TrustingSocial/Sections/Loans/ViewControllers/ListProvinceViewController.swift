@@ -8,30 +8,44 @@
 
 import UIKit
 
-// Consider to move to common compoment ground for reuseable
+// Consider to move to common compoment group for reuseable
 
 final class ListProvinceViewController: UIViewController {
 
+    @IBOutlet weak var provinceTableView: UITableView!
+    
+    var viewModel: ListProvinceViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupViewModel()
     }
+ 
+    private func setupViewModel() {
+        guard let viewModel = viewModel else { return }
+        provinceTableView.observe(for: viewModel.listProvince) { [weak self] (_) in
+            self?.provinceTableView.reloadData()
+        }
+    }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: UITableViewDataSource & UITableViewDelegate
+extension ListProvinceViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel?.numberOfItems ?? 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProvinceCell", for: indexPath)
+        cell.textLabel?.text = viewModel?.itemAtIndex(indexPath.row)
+        
+        return cell
     }
-    */
+}
 
+extension ListProvinceViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.provinceSelection?(viewModel?.itemAtIndex(indexPath.row))
+    }
 }

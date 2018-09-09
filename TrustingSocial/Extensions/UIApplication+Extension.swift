@@ -27,6 +27,16 @@ extension UIApplication {
     }
 }
 
+extension NSObject {
+    public func observe<T>(for observable: Observable<T>, with: @escaping (T) -> ()) {
+        observable.bind { observable, value  in
+            DispatchQueue.main.async {
+                with(value)
+            }
+        }
+    }
+}
+
 extension UIStoryboard {
     
     /// The class function to load the view controller from storyboard

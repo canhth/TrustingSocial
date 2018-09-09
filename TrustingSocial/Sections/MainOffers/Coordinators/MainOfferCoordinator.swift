@@ -19,9 +19,10 @@ final class MainOfferCoordinator: Coordinator {
     
     func startToLoadView()
     {
-        
         if let viewController: MainOffersViewController = UIStoryboard.createViewController(storyBoard: StoryBoardName.main) {
-            viewController.offersViewModel.offerSelection = { (offer) in
+            viewController.offersViewModel = MainOffersViewModel(service: GetOffersService())
+            viewController.offersViewModel?.delegate = viewController
+            viewController.offersViewModel?.offerSelection = { (offer) in
                 self.showRegisterLoanForm()
             }
             

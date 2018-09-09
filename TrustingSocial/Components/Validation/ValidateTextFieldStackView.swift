@@ -17,10 +17,12 @@ class ValidateTextFieldStackView: UIStackView {
         super.draw(rect)
         inputTextField.attributedPlaceholder = NSAttributedString(string: self.inputTextField.placeholder ?? "",
                                                                   attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        // Hide the error message at the first time launch
+        setupErrorMessageView(isHidden: true, errorMessage: "", duration: 0)
     }
     
-    func setupErrorMessageView(isHidden hidden: Bool, errorMessage: String) {
-        UIView.animate(withDuration: 0.3) {
+    func setupErrorMessageView(isHidden hidden: Bool, errorMessage: String, duration: Double = 0.3) {
+        UIView.animate(withDuration: duration) {
             
             self.errorLabel.text = errorMessage
             

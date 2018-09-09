@@ -31,11 +31,8 @@ final class OfferCellTableViewCell: UITableViewCell {
     // MARK: Setup cell
     func setupCellWithOffer(offer: Offer) {
         bankNameLabel.text = offer.bank.name
-        
         interestRateLabel.text = offer.interestRate.description + "%"
-        
-        minMaxAmountLabel.text = "\(offer.minAmount.convertToCurrency()) - \(offer.maxAmount.convertToCurrency())"
-        
+        minMaxAmountLabel.text = "\(offer.minAmount.convertToCurrency()) - \(offer.maxAmount.convertToCurrency())" 
         minMaxTenorLabel.text = "\(offer.minTenor) - \(offer.maxTenor) tháng"
         
         if let url = URL(string: offer.bank.logo) {

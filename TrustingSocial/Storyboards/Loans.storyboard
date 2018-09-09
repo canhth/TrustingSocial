@@ -13,7 +13,7 @@
         <!--List Province View Controller-->
         <scene sceneID="Ws8-Ft-19U">
             <objects>
-                <viewController id="YJe-VX-SYI" customClass="ListProvinceViewController" customModule="TrustingSocial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListProvinceViewController" id="YJe-VX-SYI" customClass="ListProvinceViewController" customModule="TrustingSocial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v28-au-ddz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,6 +40,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YJe-VX-SYI" id="tOk-uP-vAr"/>
+                                    <outlet property="delegate" destination="YJe-VX-SYI" id="1Mr-au-Hiz"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,10 +55,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pW3-cb-Q0t"/>
                     </view>
+                    <navigationItem key="navigationItem" id="V7w-YD-lIQ"/>
+                    <connections>
+                        <outlet property="provinceTableView" destination="96I-TF-XeR" id="ByM-VO-8uB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bd1-mv-YSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1254" y="-1391"/>
+            <point key="canvasLocation" x="1254" y="-1438"/>
         </scene>
         <!--Loans Form View Controller-->
         <scene sceneID="Daf-uR-fl5">
@@ -79,7 +87,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="MR0-ol-jfY" customClass="ValidateTextFieldStackView" customModule="TrustingSocial" customModuleProvider="target">
                                                 <rect key="frame" x="18" y="79" width="339" height="64.5"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coN-Qg-Umd">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số điện thoại (*)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coN-Qg-Umd">
                                                         <rect key="frame" x="0.0" y="0.0" width="339" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="loginEmailTextField"/>
@@ -117,7 +125,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="u9m-Rz-rA4" customClass="ValidateTextFieldStackView" customModule="TrustingSocial" customModuleProvider="target">
                                                 <rect key="frame" x="18" y="158.5" width="339" height="64.5"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Họ tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQs-6B-XFa">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Họ tên (*)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQs-6B-XFa">
                                                         <rect key="frame" x="0.0" y="0.0" width="339" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="loginPasswordTextField"/>
@@ -126,7 +134,7 @@
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocalizeKey" value="Password"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -153,9 +161,9 @@
                                                     <outlet property="inputTextField" destination="uQs-6B-XFa" id="ZpU-g8-dEc"/>
                                                 </connections>
                                             </stackView>
-                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydj-do-sQz">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydj-do-sQz">
                                                 <rect key="frame" x="18" y="501.5" width="339" height="45"/>
-                                                <color key="backgroundColor" red="0.99607843139999996" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.99607843139999996" green="0.30588235289999999" blue="0.31372549020000001" alpha="0.85999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="loginSignInButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="vhE-RP-mE7"/>
@@ -170,6 +178,9 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Login"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="ETf-mu-4pr" eventType="touchUpInside" id="0Ts-RX-mKV"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ogK-2z-qtk" customClass="ValidateTextFieldStackView" customModule="TrustingSocial" customModuleProvider="target">
                                                 <rect key="frame" x="18" y="238" width="339" height="64.5"/>
@@ -183,7 +194,7 @@
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocalizeKey" value="Password"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -216,7 +227,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dX-cq-cv4">
                                                         <rect key="frame" x="0.0" y="0.0" width="339" height="45"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-Td-hln">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address (*)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-Td-hln">
                                                                 <rect key="frame" x="0.0" y="0.0" width="309" height="45"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="loginPasswordTextField"/>
@@ -225,7 +236,7 @@
                                                                 </constraints>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocalizeKey" value="Password"/>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -258,15 +269,17 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <gestureRecognizers/>
                                                 <connections>
                                                     <outlet property="errorLabel" destination="S7c-Bt-D1u" id="zIW-f5-4lz"/>
                                                     <outlet property="inputTextField" destination="AsO-Td-hln" id="VOq-tP-ecH"/>
+                                                    <outletCollection property="gestureRecognizers" destination="SSq-dS-Gm7" appends="YES" id="Q6e-Dx-BUu"/>
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Axu-5u-FOh" customClass="ValidateTextFieldStackView" customModule="TrustingSocial" customModuleProvider="target">
                                                 <rect key="frame" x="18" y="397" width="339" height="64.5"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Thu nhập" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9F-cF-pu9">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Thu nhập (*)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9F-cF-pu9">
                                                         <rect key="frame" x="0.0" y="0.0" width="339" height="45"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="loginPasswordTextField"/>
@@ -275,7 +288,7 @@
                                                         </constraints>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocalizeKey" value="Password"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -353,8 +366,21 @@
                         <viewLayoutGuide key="safeArea" id="lfu-Rb-Ap9"/>
                     </view>
                     <navigationItem key="navigationItem" id="lwP-MY-AiT"/>
+                    <connections>
+                        <outlet property="phoneNumberInputStackView" destination="MR0-ol-jfY" id="NxE-Tw-Kwx"/>
+                        <outlet property="provinceInputStackView" destination="HEC-EH-lyZ" id="s7w-Rf-SgD"/>
+                        <outlet property="submitButton" destination="ydj-do-sQz" id="KAL-ev-3kn"/>
+                        <outlet property="userIncomeInputStackView" destination="Axu-5u-FOh" id="XNB-57-FLU"/>
+                        <outlet property="userNameInputStackView" destination="u9m-Rz-rA4" id="EFr-FI-gj4"/>
+                        <outlet property="vietnamIDInputStackView" destination="ogK-2z-qtk" id="QPu-G3-OXN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2b-7V-DIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SSq-dS-Gm7">
+                    <connections>
+                        <action selector="provinceTextFieldTapped:" destination="ETf-mu-4pr" id="SBM-jG-ReZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1254" y="-671"/>
         </scene>
