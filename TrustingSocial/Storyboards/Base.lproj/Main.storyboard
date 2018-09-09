@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="phg-dF-1BZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trusting Social-->
+        <scene sceneID="2Wg-2i-3nK">
+            <objects>
+                <viewController storyboardIdentifier="MainOffersViewController" id="w1R-cd-WoB" customClass="MainOffersViewController" customModule="TrustingSocial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9cO-Ei-W61">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z08-GG-t0r">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="SLM-Ji-6NI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh sách các khoản vay hỗ trợ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCO-Ui-nY7">
+                                            <rect key="frame" x="16" y="11" width="343" height="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.78892872431506844" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="rCO-Ui-nY7" firstAttribute="centerY" secondItem="SLM-Ji-6NI" secondAttribute="centerY" id="0or-f6-dc9"/>
+                                        <constraint firstItem="rCO-Ui-nY7" firstAttribute="leading" secondItem="SLM-Ji-6NI" secondAttribute="leading" constant="16" id="EVx-sT-ORC"/>
+                                        <constraint firstAttribute="trailing" secondItem="rCO-Ui-nY7" secondAttribute="trailing" constant="16" id="fFH-4I-WVY"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="w1R-cd-WoB" id="axa-sZ-8IA"/>
+                                    <outlet property="delegate" destination="w1R-cd-WoB" id="KNY-QK-jM7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z08-GG-t0r" firstAttribute="top" secondItem="EiK-p2-KbV" secondAttribute="top" id="63Z-V5-jop"/>
+                            <constraint firstItem="EiK-p2-KbV" firstAttribute="bottom" secondItem="z08-GG-t0r" secondAttribute="bottom" id="I85-2j-0uE"/>
+                            <constraint firstItem="EiK-p2-KbV" firstAttribute="trailing" secondItem="z08-GG-t0r" secondAttribute="trailing" id="hPN-gs-MY5"/>
+                            <constraint firstItem="z08-GG-t0r" firstAttribute="leading" secondItem="EiK-p2-KbV" secondAttribute="leading" id="oIc-8B-GKy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EiK-p2-KbV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trusting Social" id="YiR-BD-sI5">
+                        <barButtonItem key="backBarButtonItem" title="  " id="77d-nb-ZOe"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="offersTableView" destination="z08-GG-t0r" id="gjS-9p-E0T"/>
+                        <segue destination="6MC-ZI-T9G" kind="show" identifier="showLoanForm" id="z2E-ek-YQE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fm1-90-4KF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320.80000000000001" y="-675.11244377811101"/>
+        </scene>
+        <!--Loans-->
+        <scene sceneID="Cuf-fD-a4N">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="loansStoryboard" storyboardName="Loans" id="6MC-ZI-T9G" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwX-Cp-1Bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="-731"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eCp-V1-pyC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="phg-dF-1BZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CwZ-Nu-D91">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w1R-cd-WoB" kind="relationship" relationship="rootViewController" id="lvp-ck-qdB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GO-fD-e42" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-618.39999999999998" y="-675.11244377811101"/>
+        </scene>
+    </scenes>
+</document>
